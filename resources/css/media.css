@@ -1,0 +1,376 @@
+@media screen and (max-width: 1500px) {
+    .header-nav__link {
+        font-size: 16px;
+    }
+    .categories-dropdown__button span {
+        font-size: 20px;
+    }
+    .categories-dropdown__list a {
+        font-weight: 300;
+    }
+    .scroll-top-button {
+        bottom: 40px;
+    }
+    .scroll-top-button span {
+        font-size: 40px;
+    }
+    .books-info__inner {
+        gap: 60px;
+    }
+    .authors-biography-section__inner {
+        gap: 80px;
+    }
+    .authors-biography__text-container {
+        padding-top: 12px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    body, p {
+        font-size: 15px;
+    }
+    .input, .textarea {
+        font-size: 15px;
+        padding: 6px 12px;
+    }
+    .pagination {
+        flex-wrap: wrap;
+    }
+    .main__inner {
+        padding-top: 32px;
+    }
+    .main-container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .main-title {
+        font-size: 20px;
+    }
+    .scroll-top-button {
+        display: none;
+    }
+    .alert {
+        gap: 8px;
+        margin-top: 20px;
+        padding: 16px;
+        border-radius: 8px;
+    }
+    .alert__icon {
+        display: none;
+    }
+    .modal-dialog {
+        max-width: 92%;
+        padding: 20px;
+    }
+    .modal-title {
+        font-size: 20px;
+    }
+    .modal-form {
+        gap: 12px;
+    }
+    .modal-actions {
+        margin-top: 12px;
+        flex-direction: column-reverse;
+    }
+    .modal-actions button {
+        justify-content: center;
+    }
+
+    /* Header */
+    .mobile-menu-toggler {
+        display: block;
+    }
+    .header {
+        position: sticky;
+        top: 0;
+        z-index: 9;
+        -webkit-box-shadow: 0px 2px 2px 0px rgb(34 60 80 / 16%);
+        -moz-box-shadow: 0px 2px 2px 0px rgba(34, 60, 80, 1.6);
+        box-shadow: 0px 2px 2px 0px rgb(34 60 80 / 16%);
+    }
+    .header__inner {
+        padding: 14px 16px;
+    }
+    .header__logo {
+        width: 140px;
+    }
+    .header-nav {
+        display: none;
+    }
+    .header-search {
+        display: none;
+    }
+
+
+    /* Footer */
+    .footer__main {
+        padding: 40px 0 32px;
+    }
+    .footer__main-inner {
+        flex-direction: column-reverse;
+        gap: 24px;
+    }
+    .footer__about {
+        width: 100%;
+    }
+    .footer__logo {
+        display: none;
+    }
+    .footer__additional-links, .footer__contacts {
+        width: 100%;
+        padding: 0;
+        border-left: none;
+    }
+    .footer__main-title {
+        text-align: center;
+        font-size: 15px;
+        font-weight: bold;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-style: italic;
+    }
+    .footer__about-socials {
+        justify-content: center;
+    }
+    .footer__about-socials img {
+        width: 30px;
+        border-radius: 6px;
+    }
+    .footer__about-text {
+        display: none;
+    }
+    .footer__list {
+        font-size: 15px;
+    }
+    .footer__copyright {
+        font-size: 15px;
+    }
+
+
+    /* Books List */
+    .books-list {
+        gap: 32px 16px;
+        margin: 32px 0 60px;
+    }
+    .books-list__item {
+        width: calc(50% - 8px);
+    }
+    .books-card__title {
+        font-size: 14px;
+    }
+    .books-card__author {
+        font-size: 14px;
+    }
+
+
+    /* Authors List */
+    .authors-list {
+        gap: 32px 16px;
+        margin: 32px 0 60px;
+    }
+    .authors-list__item {
+        width: calc(50% - 8px);
+        padding: 16px;
+    }
+    .authors-card__name {
+        font-size: 14px;
+    }
+
+
+    /* ------------ Home page ------------ */
+    .secondary-title {
+        font-family: 'Roboto Condensed', sans-serif;
+        font-style: italic;
+        text-align: center;
+    }
+    /* Most Readable Books Carousel */
+    .horizontal-card {
+        width: 100%;
+        padding: 24px 24px 28px;
+        background-color: #edeeef;
+    }
+    .horizontal-card__mobile-image {
+        display: block !important;
+    }
+    .horizontal-card__image-container {
+        display: none;
+    }
+    .most-readable-books__navs-container {
+        display: none;
+    }
+    .horizontal-card__title {
+        padding: 0;
+        margin: 20px 0 12px;
+        font-size: 15px;
+    }
+    .horizontal-card__author {
+        font-size: 15px;
+    }
+    .horizontal-card__text-content {
+        width: 100%;
+        padding-right: 0;
+    }
+    .horizontal-card__button {
+        width: 100%;
+        justify-content: center;
+        padding: 12px 24px;
+        background: black;
+        color: white;
+    }
+    .horizontal-card__button:hover {
+        background: white;
+        color: black;
+    }
+    .most-readable-books-carousel .owl-item {
+        padding-bottom: 20px;
+    }
+
+    /* Home Books */
+    .home-books {
+        background-color: white;
+    }
+    .home-books__inner {
+        padding-top: 20px;
+    }
+    .extensive-search-title {
+        display: none;
+    }
+    .extensive-search {
+        display: none;
+    }
+    .home-books__main {
+        margin: 0;
+    }
+    .recommended-books {
+        display: none;
+    }
+    .latest-books__title {
+        border-bottom: none;
+        padding: 0;
+    }
+    .home-books .books-list__item:nth-child(15) {
+        display: none;
+    }
+    .home-top-books {
+        display: none;
+    }
+    /* ------------ /end Home page ------------ */
+
+
+    /* ------------ Books page ------------ */
+    .books-info__inner {
+        flex-direction: column;
+        gap: 20px;
+        padding-top: 0;
+    }
+    .books-info__image-container {
+        min-width: auto;
+        width: 100%;
+    }
+    .books-info__title {
+        font-size: 20px;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-style: italic;
+        text-align: center;
+    }
+    .books-info__actions {
+        flex-direction: column;
+    }
+    .books-info__actions a, .books-info__actions button {
+        width: 100%;
+        justify-content: center;
+    }
+    .book-properties-table {
+        width: 100%;
+    }
+    .book-properties-table th, .book-properties-table td {
+        padding: 10px 8px;
+    }
+    .book-properties-table th {
+        width: 110px;
+    }
+    .order-modal .modal-dialog {
+        max-width: 92%;
+    }
+    /* ------------ /end Books page ------------ */
+
+
+    /* ------------ Authors page ------------ */
+    .authors-search {
+        margin-top: 20px;
+    }
+    .authors-filter {
+        padding: 16px;
+        flex-direction: column;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+    .authors-filter__title {
+        font-size: 16px;
+    }
+    .authors-filter__list {
+        flex-wrap: wrap;
+    }
+    .authors-biography-section__inner {
+        flex-direction: column;
+        gap: 20px;
+        padding-top: 0;
+        padding-bottom: 40px;
+    }
+    .authors-biography__image {
+        width: 100%;
+        min-width: auto;
+        border: none;
+        border-radius: 8px;
+    }
+    .authors-biography__text-container {
+        padding-top: 0;
+    }
+    .authors-biography__title {
+        font-size: 20px;
+        text-align: center;
+    }
+    .authors-biography__text {
+        font-size: 15px;
+    }
+    .authors-books {
+        padding-top: 40px;
+    }
+    /* ------------ /end authors page ------------ */
+
+
+    /* ------------ Contacts page ------------ */
+    .contacts-form-container {
+        margin-top: 20px;
+        flex-direction: column;
+    }
+    .feedback-form {
+        width: 100%;
+    }
+    .contacts-page #map {
+        width: 100%;
+    }
+    .feedback-form__button {
+        width: 100%;
+        justify-content: center;
+    }
+    /* ------------ /end Contacts page ------------ */
+
+
+    /* ------------ FAQ page ------------ */
+    .faq-accordion {
+        margin-top: 20px;
+    }
+    .accordion__button {
+        font-size: 15px;
+        padding: 16px 20px;
+        gap: 4px;
+    }
+    .accordion__collapse-body {
+        font-size: 15px;
+        padding: 16px 20px;
+        line-height: 1.6;
+    }
+    /* ------------ /end FAQ page ------------ */
+
+
+}
