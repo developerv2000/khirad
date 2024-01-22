@@ -72,4 +72,9 @@ class MainController extends Controller
 
         return redirect()->back();
     }
+
+    public function successPayment(Request $request)
+    {
+        return view('success-payment.index');
+    }
 }
