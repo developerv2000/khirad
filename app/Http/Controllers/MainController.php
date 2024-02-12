@@ -77,4 +77,16 @@ class MainController extends Controller
     {
         return view('success-payment.index');
     }
+
+    public function appPrivacyPolicy()
+    {
+        return view('app.privacy-policy');
+    }
+
+    public function appPrivacyPolicyFile()
+    {
+        $filePath = public_path('app/Политика конфиденциальности.docx');
+
+        return response()->download($filePath);
+    }
 }
