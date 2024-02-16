@@ -60,7 +60,7 @@ class BookController extends Controller
         return view('books.read', compact('book'));
     }
 
-        /**
+    /**
      * Display a listing of the resource in dashboard
      *
      * @return \Illuminate\Http\Response
@@ -98,9 +98,7 @@ class BookController extends Controller
                 ->orderBy($orderBy, $orderType)
                 ->paginate(30, ['*'], 'page', $activePage)
                 ->appends($request->except('page'));
-        }
-
-        else {
+        } else {
             $items = Book::orderBy($orderBy, $orderType)
                 ->paginate(30, ['*'], 'page', $activePage)
                 ->appends($request->except('page'));
@@ -213,7 +211,7 @@ class BookController extends Controller
 
         // upload files
         Helper::uploadModelsFile($request, $book, 'image', $book->slug, self::IMAGE_PATH, 600);
-        if($request->file('image')) {
+        if ($request->file('image')) {
             Helper::createThumbs(self::IMAGE_PATH, $book->image, 240, 336);
         }
         Helper::uploadModelsFile($request, $book, 'filename', $book->slug, self::FILE_PATH);
@@ -245,7 +243,7 @@ class BookController extends Controller
     {
         $ids = (array) $request->id;
 
-        foreach($ids as $id) {
+        foreach ($ids as $id) {
             Book::find($id)->delete();
         }
 

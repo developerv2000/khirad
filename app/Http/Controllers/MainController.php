@@ -35,20 +35,20 @@ class MainController extends Controller
 
         // filter by keyword
         $keyword = $request->keyword;
-        if($keyword && $keyword != '') {
-            $books = $books->whereHas('authors', function($q) use ($keyword) {
+        if ($keyword && $keyword != '') {
+            $books = $books->whereHas('authors', function ($q) use ($keyword) {
                 $q->where('name', 'LIKE', "%{$keyword}%");
             })
 
-            ->orWhere(function ($q) use ($keyword) {
-                $q->where('title', 'LIKE', "%{$keyword}%")
-                    ->orWhere('publisher', 'LIKE', "%{$keyword}%");
-            });
+                ->orWhere(function ($q) use ($keyword) {
+                    $q->where('title', 'LIKE', "%{$keyword}%")
+                        ->orWhere('publisher', 'LIKE', "%{$keyword}%");
+                });
         }
 
         // filter by category
         $category_id = $request->category_id;
-        if($category_id && $category_id != 'all') {
+        if ($category_id && $category_id != 'all') {
             $books = $books->whereHas('categories', function ($q) use ($category_id) {
                 $q->where('id', $category_id);
             });
@@ -56,7 +56,7 @@ class MainController extends Controller
 
         // filter by publish year
         $publishYear = $request->publish_year;
-        if($publishYear && $publishYear != 'all') {
+        if ($publishYear && $publishYear != 'all') {
             $books = $books->where('publish_year', $publishYear);
         }
 

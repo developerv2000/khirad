@@ -22,9 +22,9 @@ Route::controller(MainController::class)->group(function () {
     Route::get('/', 'home')->name('home');
     Route::get('/contacts', 'contacts')->name('contacts');
     Route::get('/faq', 'faq')->name('faq');
-    Route::get('/success-payment', 'successPayment')->name('successPayment');
-    Route::get('/app-privacy-policy', 'appPrivacyPolicy')->name('appPrivacyPolicy');
-    Route::get('/app-privacy-policy-file', 'appPrivacyPolicyFile')->name('appPrivacyPolicyFile');
+    Route::get('/success-payment', 'successPayment')->name('successPayment');  # for APP
+    Route::get('/app-privacy-policy', 'appPrivacyPolicy')->name('appPrivacyPolicy');  # for APP
+    Route::get('/app-privacy-policy-file', 'appPrivacyPolicyFile')->name('appPrivacyPolicyFile');  # for APP
 
     Route::get('/search', 'search')->name('search');
     Route::post('/send-feedback', 'feedback')->name('feedback');
