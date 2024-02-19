@@ -26,6 +26,10 @@ $(document).ready(function () {
     $('.jq-select').styler();
 });
 
+function onRecaptchaSubmit(token) {
+    document.getElementById("feedback-form").submit();
+}
+
 
 // Ajax CSRF-Token initialization
 $.ajaxSetup({

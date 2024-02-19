@@ -90,6 +90,9 @@
             <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAneCOkP0fjY3gOXV9DYFTdA59yWXDvNLw&callback=initMap" async defer></script>
         @endif
 
+        {{-- Google Recaptcha v3--}}
+        <script src="https://www.google.com/recaptcha/api.js"></script>
+
         <script src="{{ mix('js/app.js') }}"></script>
 
         @production
