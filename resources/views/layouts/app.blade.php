@@ -87,11 +87,12 @@
         <script src="{{ asset('plugins/selectize/selectize.min.js') }}"></script>
 
         @if (request()->route()->getName() == 'contacts')
-            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAneCOkP0fjY3gOXV9DYFTdA59yWXDvNLw&callback=initMap" async defer></script>
-        @endif
+            {{-- Google Maps --}}
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAneCOkP0fjY3gOXV9DYFTdA59yWXDvNLw&callback=initMap"></script>
 
-        {{-- Google Recaptcha v3--}}
-        <script src="https://www.google.com/recaptcha/api.js"></script>
+            {{-- Google Recaptcha v3--}}
+            <script src="https://www.google.com/recaptcha/api.js"></script>
+        @endif
 
         <script src="{{ mix('js/app.js') }}"></script>
 
