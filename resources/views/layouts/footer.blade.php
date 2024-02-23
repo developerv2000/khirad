@@ -8,36 +8,37 @@
                     </a>
 
                     <p class="footer__about-text">
-                        Лаҳзае нишастан дар саҳифаи “Хирад”, ҳузур дар маҳзари андешамандони қурун ва фарзонагони замон аст. “Хирад”, маъбади аҳли илм ва меҳроби поки донишҷӯӣ ва илмомӯзӣ аст. Ҳарки аз китоб ва мутолиа бегона аст, ғариб ва бемӯнис аст.
+                        Лаҳзае нишастан дар саҳифаи “Хирад”, ҳузур дар маҳзари андешамандони қурун ва фарзонагони замон аст. “Хирад”, маъбади аҳли илм ва меҳроби поки донишҷӯӣ ва илмомӯзӣ аст. Ҳарки
+                        аз китоб ва мутолиа бегона аст, ғариб ва бемӯнис аст.
                     </p>
 
                     <ul class="footer__about-socials">
                         <li>
                             <a href="https://www.facebook.com/%D0%A5%D0%B8%D1%80%D0%B0%D0%B4-106239201477539" target="_blank">
-                                <img src="{{asset('img/socials/facebook.png')}}" alt="facebook">
+                                <img src="{{ asset('img/socials/facebook.png') }}" alt="facebook">
                             </a>
                         </li>
 
                         <li>
                             <a href="https://www.instagram.com/khirad.21/" target="_blank">
-                                <img class="instagram" src="{{asset('img/socials/instagram.png')}}" alt="instagram">
+                                <img class="instagram" src="{{ asset('img/socials/instagram.png') }}" alt="instagram">
                             </a>
                         </li>
 
                         <li>
                             <a href="https://www.youtube.com/channel/UCnvlnva3G4JZK9qzH4fkBvQ" target="_blank">
-                                <img src="{{asset('img/socials/youtube.png')}}" alt="youtube">
+                                <img src="{{ asset('img/socials/youtube.png') }}" alt="youtube">
                             </a>
                         </li>
 
                         <li>
                             <a href="https://t.me/Khirad21" target="_blank">
-                                <img src="{{asset('img/socials/telegram.png')}}" alt="telegram">
+                                <img src="{{ asset('img/socials/telegram.png') }}" alt="telegram">
                             </a>
                         </li>
                     </ul>
 
-                    <a class="footer__about-apk" href="{{ asset('app/Маркази Хирад.apk') }}">Боргирии барнома барои андроид!</a>
+                    <a class="footer__about-apk" href="{{ asset('app/khirad.apk') }}">Боргирии барнома барои андроид!</a>
                 </div>
 
                 <div class="footer__additional-links">
@@ -85,8 +86,8 @@
                         </li>
 
                         <li class="footer__list-item">
-                            <a href="tel:+992927685858" class="footer__list-link">
-                                <span class="material-icons">phone</span> +992 927685858
+                            <a href="tel:+992902550290" class="footer__list-link">
+                                <span class="material-icons">phone</span> +992 902550290
                             </a>
                         </li>
 
