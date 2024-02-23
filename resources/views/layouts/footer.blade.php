@@ -37,7 +37,7 @@
                         </li>
                     </ul>
 
-                    <a class="footer__about-apk" href="{{ asset('app/Маркази Хирад.apk') }}">Барномаи мо!</a>
+                    <a class="footer__about-apk" href="{{ asset('app/Маркази Хирад.apk') }}">Барои боргирӣ ин тугмаро пахш кунед!</a>
                 </div>
 
                 <div class="footer__additional-links">
