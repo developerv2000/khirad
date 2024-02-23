@@ -36,6 +36,8 @@
                             </a>
                         </li>
                     </ul>
+
+                    <a class="footer__about-apk" href="{{ asset('app/Маркази Хирад.apk') }}">Барномаи мо!</a>
                 </div>
 
                 <div class="footer__additional-links">

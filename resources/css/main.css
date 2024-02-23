@@ -643,6 +643,13 @@ button {
     width: 22px;
 }
 
+.footer__about-apk {
+    display: block;
+    width: max-content;
+    margin-top: 20px;
+    color: var(--main-color);
+}
+
 .footer__additional-links,
 .footer__contacts {
     width: 30%;
