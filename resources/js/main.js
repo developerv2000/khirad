@@ -196,27 +196,27 @@ function isAndroid() {
 }
 
 function initializeApkModal() {
-    if (!isAndroid) return;
+    if (isAndroid) {
+        let apkModal = document.querySelector('.apk-modal');
+        let apkModalDismiss = document.querySelector('.apk-modal__dismiss');
 
-    let apkModal = document.querySelector('.apk-modal');
-    let apkModalDismiss = document.querySelector('.apk-modal__dismiss');
+        let apkCookie = getCookieValue('apk-modal');
 
-    let apkCookie = getCookieValue('apk-modal');
+        // Add cookie for the first time and show modal
+        if (apkCookie === null) {
+            setCookie('apk-modal', 'visible', 60);
+            apkModal.classList.remove('apk-modal--hidden');
+        }
 
-    // Add cookie for the first time and show modal
-    if (apkCookie === null) {
-        setCookie('apk-modal', 'visible', 60);
-        apkModal.classList.remove('apk-modal--hidden');
+        // Show modal if needed. Modal is hidden by default
+        if (apkCookie == 'visible') {
+            apkModal.classList.remove('apk-modal--hidden');
+        }
+
+        // Add dismiss click listener
+        apkModalDismiss.addEventListener('click', () => {
+            setCookie('apk-modal', 'hidden', 60);
+            apkModal.classList.add('apk-modal--hidden');
+        });
     }
-
-    // Show modal if needed. Modal is hidden by default
-    if (apkCookie == 'visible') {
-        apkModal.classList.remove('apk-modal--hidden');
-    }
-
-    // Add dismiss click listener
-    apkModalDismiss.addEventListener('click', () => {
-        setCookie('apk-modal', 'hidden', 60);
-        apkModal.classList.add('apk-modal--hidden');
-    });
 }
