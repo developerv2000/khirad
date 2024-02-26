@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Mail;
 
 class MainController extends Controller
 {
-    public function home()
+    public function home(Request $request)
     {
         $mostReadableBooks = Book::where('most_readable', true)->inRandomOrder()->get();
         $recommendedBooks = Book::where('most_readable', false)->inRandomOrder()->take(7)->get();

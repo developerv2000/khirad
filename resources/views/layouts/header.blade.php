@@ -42,12 +42,17 @@
                 <li class="header-nav__li">
                     <a href="{{ route('contacts') }}" class="header-nav__link">Тамос</a>
                 </li>
+
+                <li class="header-nav__li">
+                    <a href="{{ asset('app/khirad.apk') }}" class="header-nav__link">Барномаи андроид</a>
+                </li>
             </ul>
-        </nav>  {{-- Header Nav end --}}
+        </nav> {{-- Header Nav end --}}
 
         {{-- Global Search --}}
         <form class="header-search" action="{{ route('search') }}" method="GET" id="header-search-form">
-            <input class="header-search__input header-search__input--hidden" type="text" list="header-search-datalist" autocomplete="off" name="keyword" id="header-search-input" placeholder="Ҷӯстуҷӯ..." minlength="3" required>
+            <input class="header-search__input header-search__input--hidden" type="text" list="header-search-datalist" autocomplete="off" name="keyword" id="header-search-input"
+                placeholder="Ҷӯстуҷӯ..." minlength="3" required>
             <datalist id="header-search-datalist">
                 @foreach ($searchAuthorKeywords as $keyword)
                     <option value="{{ $keyword }}">
@@ -61,7 +66,7 @@
             <button class="header-search__button button--transparent" type="button" id="header-search-button">
                 <span class="material-icons-outlined">search</span>
             </button>
-        </form>  {{-- global seach end --}}
+        </form> {{-- global seach end --}}
 
         {{-- Mobile Menu --}}
         <div class="mobile-menu">
@@ -79,7 +84,7 @@
                     <button class="mobile-search__button" type="submit">
                         <span class="material-icons-outlined">search</span>
                     </button>
-                </form>  {{-- Mobile Search end --}}
+                </form> {{-- Mobile Search end --}}
 
                 <ul class="mobile-menu__ul">
                     <li class="mobile-menu__li">
@@ -119,7 +124,7 @@
                     </li>
                 </ul>
             </nav>
-        </div>  {{-- Mobile Menu end--}}
+        </div> {{-- Mobile Menu end --}}
 
     </div>
 </header>

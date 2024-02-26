@@ -1737,3 +1737,43 @@ button {
 }
 
 /* ------------ /end App privacy policy  ------------ */
+
+
+/* ------------ APK modal  ------------ */
+.apk-modal {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    background-color: var(--secondary-background-color);
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.apk-modal--hidden {
+    display: none;
+}
+
+.apk-modal__dismiss {
+    font-size: 16px;
+    color: #767676;
+}
+
+.apk-modal__logo {
+    width: 52px;
+    border-radius: 8px;
+    margin-left: 16px;
+    margin-right: 20px;
+}
+
+.apk-modal__title {
+    margin: 0;
+    font-size: 14px;
+    color: #767676;
+}
+
+.apk-modal__link {
+    color: var(--main-color);
+    font-weight: 500;
+    margin-left: auto;
+}
+
+/* ------------ /end App APK modal  ------------ */

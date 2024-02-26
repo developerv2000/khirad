@@ -1,17 +1,16 @@
-// initialize components
 $(document).ready(function () {
-    // Register Service worker for PWA
-    if ('serviceWorker' in navigator) {
-        // Register a service worker hosted at the root of the
-        // site using the default scope.
-        navigator.serviceWorker.register(document.location.origin + '/service-worker.js').then(function (registration) {
-            console.log('Service worker registration succeeded:', registration);
-        }, /*catch*/ function (error) {
-            console.log('Service worker registration failed:', error);
-        });
-    } else {
-        console.log('Service workers are not supported.');
-    }
+    // // Register Service worker for PWA
+    // if ('serviceWorker' in navigator) {
+    //     // Register a service worker hosted at the root of the
+    //     // site using the default scope.
+    //     navigator.serviceWorker.register(document.location.origin + '/service-worker.js').then(function (registration) {
+    //         console.log('Service worker registration succeeded:', registration);
+    //     }, /*catch*/ function (error) {
+    //         console.log('Service worker registration failed:', error);
+    //     });
+    // } else {
+    //     console.log('Service workers are not supported.');
+    // }
 
     $('.selectize-singular').selectize({
         // options
@@ -24,6 +23,8 @@ $(document).ready(function () {
     });
 
     $('.jq-select').styler();
+
+    initializeApkModal();
 });
 
 
@@ -159,3 +160,52 @@ document.querySelectorAll('.collapse__button').forEach(item => {
         }
     });
 });
+
+
+// Function to set a cookie with a specific name, value, and expiration time
+function setCookie(name, value, days) {
+    const date = new Date();
+    // Set expiration date
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    const expires = "expires=" + date.toUTCString();
+    // Set the cookie
+    document.cookie = name + "=" + value + ";" + expires + ";path=/";
+}
+
+function getCookieValue(cookieName) {
+    // Split the document.cookie string into individual cookies
+    const cookies = document.cookie.split(';');
+
+    // Loop through each cookie to find the one with the specified name
+    for (let i = 0; i < cookies.length; i++) {
+        const cookie = cookies[i].trim();
+
+        // Check if this cookie has the specified name
+        if (cookie.startsWith(cookieName + '=')) {
+            // Extract and return the value of the cookie
+            return cookie.substring(cookieName.length + 1);
+        }
+    }
+
+    // If the cookie with the specified name is not found, return null
+    return null;
+}
+
+function initializeApkModal() {
+    let apkModal = document.querySelector('.apk-modal');
+    let apkModalDismiss = document.querySelector('.apk-modal__dismiss');
+
+    // Show modal if there is no cookie
+    let apkCookie = getCookieValue('apk-modal');
+    console.log('Cookie = ' + apkCookie);
+    if (!apkCookie) {
+        setCookie('apk-modal', 'visible', 60);
+        apkModal.classList.remove('apk-modal--hidden');
+    }
+
+    // Add dismiss click listener
+    apkModalDismiss.addEventListener('click', () => {
+        setCookie('apk-modal', 'hidden', 60);
+        apkModal.classList.add('apk-modal--hidden');
+    });
+}
