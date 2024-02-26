@@ -198,7 +198,8 @@ function initializeApkModal() {
     let apkCookie = getCookieValue('apk-modal');
 
     // Add cookie for the first time and show modal
-    if (!apkCookie) {
+    if (apkCookie === null) {
+        console.log('Ti tupoy suka?')
         setCookie('apk-modal', 'visible', 60);
         apkModal.classList.remove('apk-modal--hidden');
     }
