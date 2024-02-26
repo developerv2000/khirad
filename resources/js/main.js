@@ -197,9 +197,10 @@ function initializeApkModal() {
 
     let apkCookie = getCookieValue('apk-modal');
 
-    // Add cookie for the first time
+    // Add cookie for the first time and show modal
     if (!apkCookie) {
         setCookie('apk-modal', 'visible', 60);
+        apkModal.classList.remove('apk-modal--hidden');
     }
 
     // Show modal if needed. Modal is hidden by default
