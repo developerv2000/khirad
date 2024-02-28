@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Mail\Feedback;
 use App\Models\Book;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Mail;
 
@@ -108,7 +109,8 @@ class MainController extends Controller
     public function downloadApk()
     {
         $filePath = public_path('app/khirad.apk');
+        $fileSize = File::size($filePath);
 
-        return response()->download($filePath);
+        return response()->download($filePath)->headers('Content-Length',$fileSize);
     }
 }

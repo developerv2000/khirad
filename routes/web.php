@@ -25,10 +25,10 @@ Route::controller(MainController::class)->group(function () {
     Route::get('/search', 'search')->name('search');
     Route::post('/send-feedback', 'feedback')->name('feedback');
 
-    Route::get('/success-payment', 'successPayment')->name('successPayment');  # for APP
-    Route::get('/app-privacy-policy', 'appPrivacyPolicy')->name('appPrivacyPolicy');  # for APP
-    Route::get('/app-privacy-policy-file', 'appPrivacyPolicyFile')->name('appPrivacyPolicyFile');  # for APP
-    Route::post('/download-apk', 'downloadApk')->name('downloadApk');  # for APP
+    Route::get('/success-payment', 'successPayment')->name('successPayment');  # for mobile APP
+    Route::get('/app-privacy-policy', 'appPrivacyPolicy')->name('appPrivacyPolicy');  # for mobile APP
+    Route::get('/app-privacy-policy-file', 'appPrivacyPolicyFile')->name('appPrivacyPolicyFile');  # for mobile APP
+    Route::post('/download-apk', 'downloadApk')->name('downloadApk');  # for mobile APP
 });
 
 Route::controller(CategoryController::class)->prefix('categories')->name('categories.')->group(function () {
@@ -93,4 +93,4 @@ Route::middleware('auth')->prefix('dashboard')->group(function () {
     });
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
