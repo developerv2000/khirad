@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Response;
 
 class MainController extends Controller
 {
@@ -111,6 +112,6 @@ class MainController extends Controller
         $filePath = public_path('app/khirad.apk');
         $fileSize = File::size($filePath);
 
-        return response()->download($filePath)->headers('Content-Length',$fileSize);
+        return response()->download($filePath, 'khirad.apk', ['Content-Length' => $fileSize]);
     }
 }
