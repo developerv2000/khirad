@@ -44,7 +44,7 @@
                 </li>
 
                 <li class="header-nav__li">
-                    <a href="{{ asset('app/khirad.apk') }}" class="header-nav__link">Барномаи андроид</a>
+                    <a href="https://web-resh.ru/app.apk" class="header-nav__link">Барномаи андроид</a>
                 </li>
             </ul>
         </nav> {{-- Header Nav end --}}
