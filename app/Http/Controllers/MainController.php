@@ -104,4 +104,11 @@ class MainController extends Controller
 
         return response()->download($filePath);
     }
+
+    public function downloadApk()
+    {
+        $filePath = public_path('app/khirad.apk');
+
+        return response()->download($filePath);
+    }
 }

@@ -22,12 +22,13 @@ Route::controller(MainController::class)->group(function () {
     Route::get('/', 'home')->name('home');
     Route::get('/contacts', 'contacts')->name('contacts');
     Route::get('/faq', 'faq')->name('faq');
+    Route::get('/search', 'search')->name('search');
+    Route::post('/send-feedback', 'feedback')->name('feedback');
+
     Route::get('/success-payment', 'successPayment')->name('successPayment');  # for APP
     Route::get('/app-privacy-policy', 'appPrivacyPolicy')->name('appPrivacyPolicy');  # for APP
     Route::get('/app-privacy-policy-file', 'appPrivacyPolicyFile')->name('appPrivacyPolicyFile');  # for APP
-
-    Route::get('/search', 'search')->name('search');
-    Route::post('/send-feedback', 'feedback')->name('feedback');
+    Route::post('/download-apk', 'downloadApk')->name('downloadApk');  # for APP
 });
 
 Route::controller(CategoryController::class)->prefix('categories')->name('categories.')->group(function () {

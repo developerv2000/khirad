@@ -381,6 +381,13 @@ button {
     font-size: 18px;
 }
 
+.header-nav__button {
+    font-size: 18px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
 .header-search {
     display: flex;
     align-items: center;
