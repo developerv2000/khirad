@@ -28,7 +28,6 @@ Route::controller(MainController::class)->group(function () {
     Route::get('/success-payment', 'successPayment')->name('successPayment');  # for mobile APP
     Route::get('/app-privacy-policy', 'appPrivacyPolicy')->name('appPrivacyPolicy');  # for mobile APP
     Route::get('/app-privacy-policy-file', 'appPrivacyPolicyFile')->name('appPrivacyPolicyFile');  # for mobile APP
-    Route::post('/download-apk', 'downloadApk')->name('downloadApk');  # for mobile APP
 });
 
 Route::controller(CategoryController::class)->prefix('categories')->name('categories.')->group(function () {

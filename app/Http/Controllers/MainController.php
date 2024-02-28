@@ -5,11 +5,8 @@ namespace App\Http\Controllers;
 use App\Mail\Feedback;
 use App\Models\Book;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Mail;
-use Symfony\Component\HttpFoundation\BinaryFileResponse;
-use Symfony\Component\HttpFoundation\StreamedResponse;
 
 class MainController extends Controller
 {
@@ -106,31 +103,5 @@ class MainController extends Controller
         $filePath = public_path('app/Политика конфиденциальности.docx');
 
         return response()->download($filePath);
-    }
-
-    public function downloadApk()
-    {
-        $filePath = public_path('app/khirad.apk');
-        $fileSize = File::size($filePath);
-        $filename = 'khirad.apk';
-
-        // return response()->download($filePath, 'khirad.apk', ['Content-Length' => $fileSize]);
-
-        $response = new StreamedResponse(function () use ($filePath, $filename) {
-            $fileStream = fopen($filePath, 'r');
-
-            while (!feof($fileStream)) {
-                echo fread($fileStream, 1024);
-                flush();
-            }
-
-            fclose($fileStream);
-        }, 200, [
-            'Content-Type' => 'application/octet-stream',
-            'Content-Disposition' => 'attachment; filename="' . $filename . '"',
-            'Content-Length' => $fileSize,
-        ]);
-
-        return $response;
     }
 }

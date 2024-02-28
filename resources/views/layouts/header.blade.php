@@ -44,10 +44,7 @@
                 </li>
 
                 <li class="header-nav__li">
-                    <form class="header-nav__form" action="{{ route('downloadApk') }}" method="POST">
-                        @csrf
-                        <button class="header-nav__button">Барномаи андроид</button>
-                    </form>
+                    <a href="{{ asset('app/khirad.apk') }}" class="header-nav__link">Барномаи андроид</a>
                 </li>
             </ul>
         </nav> {{-- Header Nav end --}}
